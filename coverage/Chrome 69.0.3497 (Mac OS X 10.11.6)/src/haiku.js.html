@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/haiku.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">src/</a> haiku.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">50% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>8/16</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">12.5% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>1/8</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">33.33% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>3/9</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>1/1</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span></td><td class="text"><pre class="prettyprint lang-js">!function(n){var t={};function e(o){<span class="missing-if-branch" title="if path not taken" >I</span>if(t[o])<span class="cstat-no" title="statement not covered" >return t[o].exports;v</span>ar s=t[o]={i:o,l:!1,exports:{}};return n[o].call(s.exports,s,s.exports,e),s.l=!0,s.exports}e.m=n,e.c=t,e.d=<span class="fstat-no" title="function not covered" >function(n,t,o){<span class="cstat-no" title="statement not covered" ></span>e.o(n,t)||Object.defineProperty(n,t,{configurable:!1,enumerable:!0,get:o})}</span>,e.r=<span class="fstat-no" title="function not covered" >function(n){<span class="cstat-no" title="statement not covered" ></span>Object.defineProperty(n,"__esModule",{value:!0})}</span>,e.n=<span class="fstat-no" title="function not covered" >function(n){<span class="cstat-no" title="statement not covered" ></span>var t=n&amp;&amp;n.__esModule?<span class="fstat-no" title="function not covered" >function(){<span class="cstat-no" title="statement not covered" ></span>return n.default}</span>:<span class="fstat-no" title="function not covered" >function(){<span class="cstat-no" title="statement not covered" ></span>return n}</span>;<span class="cstat-no" title="statement not covered" >r</span>eturn e.d(t,"a",t),t}</span>,e.o=<span class="fstat-no" title="function not covered" >function(n,t){<span class="cstat-no" title="statement not covered" ></span>return Object.prototype.hasOwnProperty.call(n,t)}</span>,e.p="/var/folders/zz/zyxvpxvq6csfxvn_n00000s4000069/T/_karma_webpack_/",e(e.s=12)}({12:function(module,exports,__webpack_require__){"use strict";eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i &lt; props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar Haiku = exports.Haiku = function () {\n  function Haiku(first, second, third) {\n    _classCallCheck(this, Haiku);\n\n    this.first = first;\n    this.second = second;\n    this.third = third;\n  }\n\n  _createClass(Haiku, [{\n    key: 'countVowel',\n    value: function countVowel() {\n      var poem = this.first;\n      var poemCharacters = poem.split('');\n      console.log(poemCharacters);\n      var vowel = ['a', 'e', 'i', 'o', 'u'];\n      var count = 0;\n\n      console.log(poemCharacters[0]);\n      for (var i = 0; i &lt; poemCharacters.length; i++) {\n        if (vowel.includes(poemCharacters[i])) {\n          count++;\n        }\n      }\n      return count;\n    }\n  }, {\n    key: 'countSilentVowel',\n    value: function countSilentVowel() {\n      var poem = this.first;\n      var poemWords = poem.split(' ');\n      console.log(poem);\n      var silentVowel = /e$/i;\n      var silentCount = 0;\n      console.log(poemWords.length);\n      for (var i = 0; i &lt; poemWords.length; i++) {\n        if (silentVowel.test(poemWords[i])) {\n          console.log(poemWords[i]);\n          silentCount++;\n        }\n      }\n      return silentCount;\n    }\n  }, {\n    key: 'countDiphthong',\n    value: function countDiphthong() {\n      var poem = this.first;\n      var poemWords = poem.split(' ');\n      console.log(poemWords);\n      var diphthongs = [/eo/i, /ai/i, /ei/i, /ee/i, /ou/i, /ie/i, /io/i];\n      var diphCount = 0;\n\n      console.log(poemWords[0]);\n      for (var i = 0; i &lt; poemWords.length; i++) {\n        if (diphthongs.test(poemWords[i])) {\n          diphCount++;\n        }\n      }\n      return diphCount;\n    }\n  }]);\n\n  return Haiku;\n}();\n\n// let newHaiku = new Haiku(\"apple apple\",\"apple\",\"apple\");\n// let result = newHaiku.countSilentVowel();\n// result;//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvaGFpa3UuanM/Yzg3ZSJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7O0lBQ0U7aUJBQVksT0FBTyxRQUFRO0FBQ3pCOztTQUFLLFFBQ0w7U0FBSyxTQUNMO1NBQUssUUFDTjtBQUVEOzs7O2lDQUNFO1VBQUksT0FBTyxLQUNYO1VBQUksaUJBQWlCLEtBQUssTUFDMUI7Y0FBUSxJQUNSO1VBQUksUUFBUSxDQUFDLEtBQUksS0FBSSxLQUFJLEtBQ3pCO1VBQUksUUFFSjs7Y0FBUSxJQUFJLGVBQ1o7V0FBSSxJQUFJLElBQUUsR0FBRyxJQUFHLGVBQWUsUUFBUSxLQUNyQztZQUFHLE1BQU0sU0FBUyxlQUFlLEtBQy9CO0FBQ0Q7QUFDRjtBQUNEO2FBQ0Q7QUFFRDs7O3VDQUNFO1VBQUksT0FBTyxLQUNYO1VBQUksWUFBWSxLQUFLLE1BQ3JCO2NBQVEsSUFDUjtVQUFJLGNBQ0o7VUFBSSxjQUNKO2NBQVEsSUFBSSxVQUNaO1dBQUksSUFBSSxJQUFFLEdBQUcsSUFBRyxVQUFVLFFBQVEsS0FDaEM7WUFBRyxZQUFZLEtBQUssVUFBVSxLQUM1QjtrQkFBUSxJQUFJLFVBQ1o7QUFDRDtBQUNGO0FBQ0Q7YUFDRDtBQUVEOzs7cUNBQ0U7VUFBSSxPQUFPLEtBQ1g7VUFBSSxZQUFZLEtBQUssTUFDckI7Y0FBUSxJQUNSO1VBQUksYUFBYSxDQUFDLE9BQU0sT0FBTSxPQUFNLE9BQU0sT0FBTSxPQUNoRDtVQUFJLFlBRUo7O2NBQVEsSUFBSSxVQUNaO1dBQUksSUFBSSxJQUFFLEdBQUcsSUFBRyxVQUFVLFFBQVEsS0FDaEM7WUFBRyxXQUFXLEtBQUssVUFBVSxLQUMzQjtBQUNEO0FBQ0Y7QUFDRDthQUNEO0FBckRnQjs7Ozs7O0FBd0RuQjtBQUNBO0FBQ0EiLCJmaWxlIjoiMTIuanMiLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgY2xhc3MgSGFpa3Uge1xuICBjb25zdHJ1Y3RvcihmaXJzdCwgc2Vjb25kLCB0aGlyZCkge1xuICAgIHRoaXMuZmlyc3QgPSBmaXJzdDtcbiAgICB0aGlzLnNlY29uZCA9IHNlY29uZDtcbiAgICB0aGlzLnRoaXJkID0gdGhpcmQ7XG4gIH1cblxuICBjb3VudFZvd2VsKCl7XG4gICAgbGV0IHBvZW0gPSB0aGlzLmZpcnN0O1xuICAgIGxldCBwb2VtQ2hhcmFjdGVycyA9IHBvZW0uc3BsaXQoJycpO1xuICAgIGNvbnNvbGUubG9nKHBvZW1DaGFyYWN0ZXJzKTtcbiAgICBsZXQgdm93ZWwgPSBbJ2EnLCdlJywnaScsJ28nLCd1J107XG4gICAgbGV0IGNvdW50PSAwO1xuXG4gICAgY29uc29sZS5sb2cocG9lbUNoYXJhY3RlcnNbMF0pO1xuICAgIGZvcihsZXQgaT0wOyBpPCBwb2VtQ2hhcmFjdGVycy5sZW5ndGg7IGkrKykge1xuICAgICAgaWYodm93ZWwuaW5jbHVkZXMocG9lbUNoYXJhY3RlcnNbaV0pKXtcbiAgICAgICAgY291bnQrKztcbiAgICAgIH1cbiAgICB9XG4gICAgcmV0dXJuIGNvdW50O1xuICB9XG5cbiAgY291bnRTaWxlbnRWb3dlbCgpe1xuICAgIGxldCBwb2VtID0gdGhpcy5maXJzdDtcbiAgICBsZXQgcG9lbVdvcmRzID0gcG9lbS5zcGxpdCgnICcpO1xuICAgIGNvbnNvbGUubG9nKHBvZW0pO1xuICAgIGxldCBzaWxlbnRWb3dlbCA9IC9lJC9pO1xuICAgIGxldCBzaWxlbnRDb3VudD0gMDtcbiAgICBjb25zb2xlLmxvZyhwb2VtV29yZHMubGVuZ3RoKTtcbiAgICBmb3IobGV0IGk9MDsgaTwgcG9lbVdvcmRzLmxlbmd0aDsgaSsrKSB7XG4gICAgICBpZihzaWxlbnRWb3dlbC50ZXN0KHBvZW1Xb3Jkc1tpXSkpe1xuICAgICAgICBjb25zb2xlLmxvZyhwb2VtV29yZHNbaV0pO1xuICAgICAgICBzaWxlbnRDb3VudCsrO1xuICAgICAgfVxuICAgIH1cbiAgICByZXR1cm4gc2lsZW50Q291bnQ7XG4gIH1cblxuICBjb3VudERpcGh0aG9uZygpe1xuICAgIGxldCBwb2VtID0gdGhpcy5maXJzdDtcbiAgICBsZXQgcG9lbVdvcmRzID0gcG9lbS5zcGxpdCgnICcpO1xuICAgIGNvbnNvbGUubG9nKHBvZW1Xb3Jkcyk7XG4gICAgbGV0IGRpcGh0aG9uZ3MgPSBbL2VvL2ksL2FpL2ksL2VpL2ksL2VlL2ksL291L2ksL2llL2ksL2lvL2ldO1xuICAgIGxldCBkaXBoQ291bnQ9IDA7XG5cbiAgICBjb25zb2xlLmxvZyhwb2VtV29yZHNbMF0pO1xuICAgIGZvcihsZXQgaT0wOyBpPCBwb2VtV29yZHMubGVuZ3RoOyBpKyspIHtcbiAgICAgIGlmKGRpcGh0aG9uZ3MudGVzdChwb2VtV29yZHNbaV0pKXtcbiAgICAgICAgZGlwaENvdW50Kys7XG4gICAgICB9XG4gICAgfVxuICAgIHJldHVybiBkaXBoQ291bnQ7XG4gIH1cbn1cblxuLy8gbGV0IG5ld0hhaWt1ID0gbmV3IEhhaWt1KFwiYXBwbGUgYXBwbGVcIixcImFwcGxlXCIsXCJhcHBsZVwiKTtcbi8vIGxldCByZXN1bHQgPSBuZXdIYWlrdS5jb3VudFNpbGVudFZvd2VsKCk7XG4vLyByZXN1bHQ7XG4iXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///12\n")}});</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Oct 10 2018 16:39:22 GMT-0700 (PDT)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>
