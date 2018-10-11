@@ -15,16 +15,14 @@ export class Haiku {
       poem = this.third;
     }
     let poemCharacters = poem.split('');
-    console.log(poemCharacters);
     let vowel = ['a','e','i','o','u'];
     let count= 0;
-
-    console.log(poemCharacters[0]);
     for(let i=0; i< poemCharacters.length; i++) {
       if(vowel.includes(poemCharacters[i])){
         count++;
       }
     }
+    console.log(count);
     return count;
   }
 
@@ -42,10 +40,10 @@ export class Haiku {
     let silentCount= 0;
     for(let i=0; i< poemWords.length; i++) {
       if(silentVowel.test(poemWords[i])){
-        console.log(poemWords[i]);
         silentCount++;
       }
     }
+    console.log(silentCount);
     return silentCount;
   }
 
@@ -59,20 +57,18 @@ export class Haiku {
       poem = this.third;
     }
     let poemWords = poem.split(' ');
-    console.log(poemWords);
     let diphthongs = [/eo/i,/ai/i,/ei/i,/ee/i,/ou/i,/ui/i,/ie/i,/io/i,/oo/i,/uo/i];
     let diphCount= 0;
 
-    console.log(poemWords[0]);
     for(let i=0; i< poemWords.length; i++) {
       for(let j=0; j<diphthongs.length; j++){
-        console.log(diphthongs[j]);
         if(diphthongs[j].test(poemWords[i])){
 
           diphCount++;
         }
       }
     }
+    console.log(diphCount);
     return diphCount;
   }
 
@@ -86,6 +82,19 @@ export class Haiku {
     }
     let count = self.countVowel(lineNumber) - self.countSilentVowel(lineNumber) - self.countDiphthong(lineNumber);
     if (count == required) {
+      console.log(count+ "/" +required );
+      return true;
+    } else {
+      console.log(count+ "/" +required );
+      return false;
+    }
+  }
+
+  haikuChecker(){
+    // console.log(this.syllableChecker(1));
+    // console.log(this.syllableChecker(2));
+    // console.log(this.syllableChecker(3));
+    if(this.syllableChecker(1) && this.syllableChecker(2) && this.syllableChecker(3)) {
       return true;
     } else {
       return false;
@@ -93,6 +102,6 @@ export class Haiku {
   }
 }
 
-// let newHaiku = new Haiku("book book","apple","apple");
-// let result = newHaiku.countDiphthong();
+// let newHaiku = new Haiku("come epicodus","smoke cigarette and drink beer","rather than coding");
+// let result = newHaiku.haikuChecker();
 // result;
