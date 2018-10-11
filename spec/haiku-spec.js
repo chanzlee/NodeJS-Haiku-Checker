@@ -25,4 +25,10 @@ describe('Haiku', function() {
     let result = newHaiku.syllableChecker(1);
     expect(result).toEqual(true);
   });
+
+  it('should test whether syllable checker returns right', function() {
+    let newHaiku = new Haiku("come epicodus","smoke cigarette and drink beer","rather than coding");
+    let result = newHaiku.haikuChecker();
+    expect(result).toEqual(true);
+  });
 });
