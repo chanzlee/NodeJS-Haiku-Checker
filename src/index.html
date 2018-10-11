@@ -1,10 +1,27 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <script type="text/javascript" src="bundle.js"></script>
-    <title>HaikuChecker</title>
-  </head>
-  <body>
-    <p>HaikuChecker</p>
-  </body>
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <title>Haiku Checker</title>
+</head>
+<body>
+  <h1 class="jumbotron">Haiku Checker</h1>
+  <div class="container">
+    <p>Type Haiku</p>
+    <form id="form">
+        <label for="first">First line:</label>
+        <input id="first" type="text" name="first">
+        <label for="second">Second line:</label>
+        <input id="second" type="text" name="second">
+        <label for="third">Third line:</label>
+        <input id="third" type="text" name="third">
+      <button class="btn btn-success" type="submit">Submit</button>
+    </form>
+
+  </div>
+
+  <div>
+    <h3><span id="result"></span></h3>
+  </div>
+</body>
 </html>
